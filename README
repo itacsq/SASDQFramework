@@ -1,0 +1,22 @@
+OBIETTIVO 
+Elaborazione di un sistema automatico per il controllo della qualità delle variabili presenti nei loro sistemi alimentanti. In particolare il sistema alimenta la struttura di rischio utile per il calcolo della nuova normativa IFRS9.
+L’output del processo consiste in una serie di Report HTML contenti le informazioni utili all’utente finale per valutare la qualità dei dati sottostanti il processo IFRS9.
+
+
+IMPLEMENTAZIONE TECNICA
+L’esigenza di business è stata implementata attraverso un progetto Enterprise Guide e un file Excel guida. Attraverso il file Excel (FILE_SAS.xlsx), l’utente può:
+1.	Qualificare le variabili in input al controllo;
+2.	Definire una serie di controlli (prestabiliti in fase di analilsi) per i quali attivare la reportistica di dettaglio. In particolare i controlli sono di tre tipi:
+	a.	Controlli Granulari: una serie di condizioni (indicati nel file di input) come il dominio della variabile, l’andamento storico o la presenza di valori associabili al missing
+	b.	Controlli Sintetici: una serie di sintesi riportanti le distribuzioni dei valori, le frequenze o i percentili
+	c.	Controlli Specifici: una serie di controlli implementati ad hoc attraverso tabelle a doppia entrata per valutare la cross distribuzione tra le variabili
+3.	Impostare i parametri dei controlli
+4.	Impostare le descrizioni che vengono riportate nel report finale
+5.	Selezionare la tabella e la libreria di provenienza dei dati: i controlli girano per tutte le variabili presenti nel foglio di controllo e per tutte le tabelle associate
+
+CARATTERISTICHE AMBIENTE (COMPONENTE	VERSIONE 	NOTE)
+- SAS: 9.3	Problemi durante l’import di File Excel e nella stampa di PDF
+- GUIDE: 5.1	Sviluppato un componente custom per il caricamento di Excel che poi non è stato implementato in fase di progetto
+- OS: AIX	
+
+
